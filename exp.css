@@ -32,6 +32,11 @@ ul li {
       
   }
 
+  .heads2{
+    text-align:left;
+    
+  }
+
   .footer {
     background-color: #535354;
     margin: 0px auto;
@@ -39,7 +44,7 @@ ul li {
   }
   
   .section{
-    padding-top: 70px;
+    padding-top: 20px;
   }
 
   /* .card{

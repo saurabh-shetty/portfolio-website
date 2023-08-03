@@ -10,10 +10,45 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
     <link rel="stylesheet" type="text/css" href="exp.css" />
+
+
+    
+    <script>
+    // Function to handle smooth scrolling to a section
+    function smoothScrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+
+        // Check if the section exists and then scroll to it
+        if (section) {
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar.offsetHeight;
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionOffset = sectionTop - navbarHeight;
+
+        // Scroll to the section with smooth behavior
+        window.scrollBy({
+            top: sectionOffset,
+            behavior: 'smooth'
+        });
+        }
+    }
+
+    // Attach event listeners to the internal links to trigger smooth scrolling
+    document.addEventListener('DOMContentLoaded', function () {
+        const internalLinks = document.querySelectorAll('a[href^="#"]');
+        internalLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const sectionId = link.getAttribute('href').substring(1);
+            smoothScrollToSection(sectionId);
+        });
+        });
+    });
+    </script>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-        
         <div class="container">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
             <span class="navbar-toggler-icon"></span>
@@ -29,8 +64,9 @@
             </ul>
          </div>
         </div>
-        
-    </nav>               
+    </nav>   
+
+    <!-- Jumbotron -->
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header justify-content-center">
@@ -45,7 +81,7 @@
                 <div class="col-2 align-self-center">
                    <img src="img1.jpeg" class="img-fluid"></img>
                 </div>
-                <div class="col heads">
+                <div class="col heads2">
                         <div class="card" style="background-color: #111111;">
                             <div class="card-header">
                                 <h2 class="mb-0">
@@ -68,72 +104,51 @@
             <br>
             <div class="row row-content">
                 <div class="col col-sm-4 offset-sm-4">
-                    <a role="button" class="btn btn-dark btn-block" id="pdf" href="">Download Resume
+                    <a role="button" class="btn btn-dark btn-block" id="pdf" href="https://drive.google.com/file/d/1Pyqq9L7rrVTHDnGhdfEEkZb77Eryl3S7/view?usp=sharing" target="_blank">Resume
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <div class="container section" id="education">
-        <!-- <div class="row row-content">
-            <div class="col-12">
-                <h2>Who am I?</h2>
-                
-                
-                <div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="mb-0">
-                                Saurabh Rohit Shetty <small> - Master's Computer Science Student at UIUC</small>                                
-                            </h3>
-                        </div>
-                        <div>
-                            <div class="card-body">
-                                <p class="d-none d-sm-block">I am Saurabh Rohit Shetty, a Computer Science Graduate Student and a Teaching Assistant at the University of Illinois Urbana-Champaign (UIUC). I love problem-solving, which is probably why I love working on and developing softwares which involve massive amounts of real-world problem-solving.
-                                    I have had sufficient experience in Software Development and Engineering through my past internships, projects and coursework. I have worked with various Programming Languages like Java, Python, C, C++, C#, JavaScript, Swift, and Dart. In addition, I have good command over Database Systems like MySQL, MongoDB, and Neo4j.
-                                    I developed this command over my tenure as a Teaching Assistant at UIUC</p>    
-                            </div>
-                        </div>
-                    </div>
 
-                                            
-                             
-                    
-                </div>
-            </div>
-        </div> -->
-        <!-- <div class="row row-content" id="aboutme">
+
+    <!-- Sections -->
+    <br>
+    <div class="container">
+        <div class="row row-content section" id="education">
             <div class="col-12">
-                <h2>About Me</h2>
-                <p>I am Saurabh Rohit Shetty, a Computer Science Graduate Student and a Teaching Assistant at the University of Illinois Urbana-Champaign (UIUC). I love problem-solving, which is probably why I love working on and developing softwares which involve massive amounts of real-world problem-solving.
-                    I have had sufficient experience in Software Development and Engineering through my past internships, projects and coursework. I have worked with various Programming Languages like Java, Python, C, C++, C#, JavaScript, Swift, and Dart. In addition, I have good command over Database Systems like MySQL, MongoDB, and Neo4j.
-                    I developed this command over my tenure as a Teaching Assistant at UIUC 
-                </p> -->
-                <!-- <ul>                
-                    <li>Went to Universal School Ghatkopar</li>
-                    <li>Went to Pace Jr College for high school</li>
-                    <li>Joined KJ Somaiya College of Engineering in 2018, Pursuing Computer Engineering</li>
-                    <li>Graduating in the year 2022</li>
-                </ul> -->
-            <!-- </div>
-        </div> -->
-        <!-- <div class="row row-content" id="education">
-            <div class="col-12">
-                <br>
-                <br>
-            </div>
-        </div> -->
-        <div class="row row-content">
-            <div class="col-12">
-                <h2>Education</h2>
+                <h2><u>Education</u></h2>
                 <ul>                
                     <li>
-                        <h4>Master's Computer Science</h3>
-                        <p>University of Illinois at Urbana-Champaign&ensp;|&ensp;GPA: 3.76/4</p>                        
+                        <h4>Master's in Computer Science <span style="font-size:small;"><i>(August 2022 - December 2023)</i></span></h3>
+                        <p>University of Illinois at Urbana-Champaign&ensp;|&ensp;GPA: 3.76/4</p>  
+                        <ul>
+                            <li>Relevant Coursework: CS 411 - Database Systems,
+                            CS 427 - Software Engineering,
+                            CS 473 - Algorithms,
+                            CS 498 - Cloud Computing Applications,
+                            CS 565 - Human-Computer Interaction,
+                            TE 510 - Advanced Creativity</li>
+                        </ul>                      
                     </li>
                     <li>
-                        <h4>Bachelor of Technology: Computer Engineering</h3>
-                        K. J. Somaiya College of Engineering, University of Mumbai&ensp;|&ensp;GPA: 9.27/10                        
+                        <h4>Bachelor of Technology: Computer Engineering <span style="font-size:small;"><i>(August 2018 - June 2022)</i></span></h3>
+                        <p>K. J. Somaiya College of Engineering, University of Mumbai&ensp;|&ensp;GPA: 9.27/10</p>      
+                        <ul>
+                            <li>Relevant Coursework: Data Structures,
+                            Objected Oriented Programming Methodology,
+                            Analysis of Algorithms,
+                            Relational Database Management Systems,
+                            Open Source Technology Programming,
+                            Software Engineering,
+                            Computer Networks,
+                            Operating System and System Software,
+                            Mobile Application Development - iOS Platform,
+                            Full Stack Development,
+                            Micro Services and DevOps,
+                            Cloud Computing
+                            </li>
+                        </ul>                                        
                     </li>
                     <!-- <li>
                         <h4>Bachelor of Technology: Computer Engineering</h3>
@@ -146,14 +161,14 @@
                 </ul>
             </div>
         </div>
-        <div class="row row-content" id="experience">
+        <!-- <div class="row row-content" id="experience">
             <div class="col-12">
                 <br>
                 <br>
-                <!-- <br> -->
+              
             </div>
-        </div>
-        <div class="row row-content">
+        </div> -->
+        <div class="row row-content section" id="experience">
             <div class="col-12">
                 <h2><u>Experience</u></h2>
                 <ul>
@@ -162,7 +177,8 @@
                         <h4>DTV Innovations - Software Engineer Intern <span style="font-size:small;"><i>(May 2023 - Aug 2023)</i></span></h3>
                         <p> Creating the organization’s first MMT implementation of the ATSC 3.0 standard.
                             Developing an ATSC 3.0 NextGen TV sender using the MMTP protocol to transmit high-quality Video and Audio streams, including 4K, 8K, UHD, and Dolby Atmos. 
-                            Crafting a C++ project to develop a sender that breaks Video and Audio files into MMTP packets and sends them over a broadcasting network using sockets. Leveraging Multithreading to increase the performance of the sender.
+                            Crafting a C++ project to develop a sender that breaks Video and Audio files into MMTP packets and sends them over a broadcasting network using sockets. Leveraging Multithreading to increase the performance of the sender. 
+                            Using Object Oriented Programming to create different types of messages and packets.
                             Integrating the sender with a play framework project.
                          </p>                        
                     </li>        
@@ -179,28 +195,12 @@
                             In this internship, I learned about basic machine learning algorithms like linear regression, KNN, decision trees, and classification algorithms. In addition, I also learned a new programming language, R. Moreover, I learned to implement basic machine learning algorithms using R packages.
                         </p>                        
                     </li>
-                    <!-- <li>
-                        <h4>Bachelor of Technology: Computer Engineering</h3>
-                        K. J. Somaiya College of Engineering, University of Mumbai&ensp;|&ensp;GPA: 9.27/10                        
-                    </li> -->
-
-                    <!-- <li>Went to Universal School Ghatkopar</li>
-                    <li>Went to Pace Jr College for high school</li>
-                    <li>Joined KJ Somaiya College of Engineering in 2018, Pursuing Computer Engineering</li>
-                    <li>Graduating in the year 2022</li> -->
                 </ul>
             </div>
         </div>    
-        <div class="row row-content" id="projects">
+        <div class="row row-content section" id="projects">
             <div class="col-12">
-                <br>
-                <br>
-                <!-- <br> -->
-            </div>
-        </div>
-        <div class="row row-content">
-            <div class="col-12">
-                <h2>Projects</h2>
+                <h2><u>Projects</u></h2>
                 <ul>
                     <li>
                         <h4>Chatbot (University of Illinois at Urbana-Champaign) <span style="font-size:small;"><i>(January 2023 - May 2023)</i></span></h3>
@@ -225,9 +225,9 @@
                 </ul>
             </div>
         </div>
-        <div class="row row-content">
+        <div class="row row-content section">
             <div class="col-12">
-                <h2>Extracurricular Activities</h2>
+                <h2><u>Extracurricular Activities</u></h2>
                 <ul>
                     <li>
                         <h4>University of Illinois at Urbana-Champaign (UIUC) - Graduate Teaching Assistant <span style="font-size:small;"><i>(January 2023 - May 2023)</i></span></h3>
@@ -252,7 +252,6 @@
             <div class="col-12">
                 <p></p>
                 <br>
-
             </div>
         </div>
         <div class="row row-content">
@@ -272,140 +271,10 @@
                 </div>
             </div>
         </div>
-     
-        <div class="row row-content">
-            <div class="col-12">
-                <br>
-                <br>
-                <br>
-            </div>
-        </div>
-
-        <!-- <div class="row row-content">
-            <div class="col-12">
-                <h2>Who am I?</h2>
-                
-                
-                <div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="mb-0">
-                                Saurabh Shetty <small>-Third Year computer engineering student</small>                                
-                            </h3>
-                        </div>
-                        <div>
-                            <div class="card-body">
-                                <p class="d-none d-sm-block">Hello I am Saurabh Shetty. I am currently studying at KJ Somaiya College of Engineering. I am a third year Computer Engineering student and I am currently exploring various fields of Computer engineering. I have learnt HTML, Css, Bootstrap. I also have some experience in machine learning. I am also learning mobile application development using Xcode </p>    
-                            </div>
-                        </div>
-                    </div>
-
-                                            
-                             
-                    
-                </div>
-            </div>
-        </div> -->
+    
         <br>
         <br>
         <br>
-        <!--<h2>Technical skills</h2>  
-        <br>  
-        <div class="row row-content">
-            <div class="col-12">                                                            
-                <div class="skill-cont">
-                    <h5 class="skill">Competitive programming</h3>
-                    <div class="progress" style="height:36px">
-                      <div class="progress-bar bg-success" style="width:85%;height:36px">85%</div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="mb-0">
-                                Saurabh Shetty <small>-Third Year computer engineering student</small>                                
-                            </h3>
-                        </div>
-                        <div>
-                            <div class="card-body">
-                                <p class="d-none d-sm-block">Hello I am Saurabh Shetty. I am currently studying at KJ Somaiya College of Engineering. I am a third year Computer Engineering student and I am currently exploring various fields of Computer engineering. I have learnt HTML, Css, Bootstrap. I also have some experience in machine learning. I am also learning mobile application development using Xcode </p>    
-                            </div>
-                        </div>
-                    </div>                                                                    
-            </div>
-        </div>    
-        <br>                
-        <div class="row row-content">
-            <div class="col-12">                                                            
-                <div class="skill-cont">
-                    <h5 class="skill">React JS</h3>
-                    <div class="progress" style="height:36px">
-                      <div class="progress-bar bg-success" style="width:75%;height:36px">75%</div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="mb-0">
-                                Saurabh Shetty <small>-Third Year computer engineering student</small>                                
-                            </h3>
-                        </div>
-                        <div>
-                            <div class="card-body">
-                                <p class="d-none d-sm-block">Hello I am Saurabh Shetty. I am currently studying at KJ Somaiya College of Engineering. I am a third year Computer Engineering student and I am currently exploring various fields of Computer engineering. I have learnt HTML, Css, Bootstrap. I also have some experience in machine learning. I am also learning mobile application development using Xcode </p>    
-                            </div>
-                        </div>
-                    </div>                                                                   
-            </div>
-        </div> 
-        <br>                
-        <div class="row row-content">
-            <div class="col-12">                                                            
-                <div class="skill-cont">
-                    <h5 class="skill">Machine learning</h3>
-                    <div class="progress" style="height:36px">
-                      <div class="progress-bar bg-success" style="width:70%;height:36px">70%</div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="mb-0">
-                                Saurabh Shetty <small>-Third Year computer engineering student</small>                                
-                            </h3>
-                        </div>
-                        <div>
-                            <div class="card-body">
-                                <p class="d-none d-sm-block">Hello I am Saurabh Shetty. I am currently studying at KJ Somaiya College of Engineering. I am a third year Computer Engineering student and I am currently exploring various fields of Computer engineering. I have learnt HTML, Css, Bootstrap. I also have some experience in machine learning. I am also learning mobile application development using Xcode </p>    
-                            </div>
-                        </div>
-                    </div>                                                                 
-            </div>
-        </div>    
-        <br>                
-        <div class="row row-content">
-            <div class="col-12">                                                            
-                <div class="skill-cont">
-                    <h5 class="skill">IOS App Develoment</h3>
-                    <div class="progress" style="height:36px">
-                      <div class="progress-bar bg-success" style="width:80%;height:36px">80%</div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="mb-0">
-                                Saurabh Shetty <small>-Third Year computer engineering student</small>                                
-                            </h3>
-                        </div>
-                        <div>
-                            <div class="card-body">
-                                <p class="d-none d-sm-block">Hello I am Saurabh Shetty. I am currently studying at KJ Somaiya College of Engineering. I am a third year Computer Engineering student and I am currently exploring various fields of Computer engineering. I have learnt HTML, Css, Bootstrap. I also have some experience in machine learning. I am also learning mobile application development using Xcode </p>    
-                            </div>
-                        </div>
-                    </div>                                                               
-            </div>
-        </div>  -->
         
         
         <br>
