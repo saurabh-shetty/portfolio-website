@@ -1,0 +1,48 @@
+
+/*body { 
+    font-family: Georgia; 
+    color:#444;; 
+}*/
+ul li {
+    padding-bottom: 20px;
+  }
+
+.row-header {
+    margin: 0px auto;
+    padding: 0px 0px;
+}
+
+.jumbotron{
+    margin: 0px auto;
+    padding: 70px 30px;
+    background:#111111;
+    color: floralwhite;
+}
+
+.jumbo{
+    width:80.2%;
+}
+
+.navbar-dark {
+    background-color: #3f3e3f;
+  }
+
+  .heads{
+      text-align:center;
+      
+  }
+
+  .footer {
+    background-color: #535354;
+    margin: 0px auto;
+    padding: 20px 0px;
+  }
+  
+  .section{
+    padding-top: 70px;
+  }
+
+  /* .card{
+    background-color: #111111;
+  } */
+
