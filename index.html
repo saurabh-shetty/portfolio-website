@@ -44,6 +44,13 @@
         });
         });
     });
+
+    document.addEventListener('click', function (event) {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show') && !event.target.closest('.navbar-collapse')) {
+            navbarCollapse.classList.remove('show');
+        }
+    });
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -94,7 +101,7 @@
                             </div>
                             <div>
                                 <div class="card-body">
-                                    <p style="text-align: justify;">Hello! I am Saurabh Rohit Shetty, a Computer Science Graduate Student at the University of Illinois Urbana-Champaign. I love problem-solving. This is the reason for my proclivity towards Software Development and Engineering, as it involves massive amounts of real-world problem-solving. I have gained sufficient experience in Software Development and Engineering through my internships, projects and coursework. My goal in life is to do something that has a huge impact on this world. Thus, I love to work on projects that positively affect the lives of people and that help make this world a more convenient and better place to live. Finally, I like to improve consistently, be it myself or my code's time complexity. Well, I do Competitive Programming for fun too!</p>    
+                                    <p class="custom-text-style">Hello! I am Saurabh Rohit Shetty, a Computer Science Graduate Student at the University of Illinois Urbana-Champaign. I love problem-solving. This is the reason for my proclivity towards Software Development and Engineering, as it involves massive amounts of real-world problem-solving. I have gained sufficient experience in Software Development and Engineering through my internships, projects and coursework. My goal in life is to do something that has a huge impact on this world. Thus, I love to work on projects that positively affect the lives of people and that help make this world a more convenient and better place to live. Finally, I like to improve consistently, be it myself or my code's time complexity. Well, I do Competitive Programming for fun too!</p>    
                                     <!-- <h4 style="text-align: justify;">I am Saurabh Rohit Shetty, a Computer Science Graduate Student and a Teaching Assistant at the University of Illinois Urbana-Champaign (UIUC). I love problem-solving, which is probably why I love working on and developing softwares which involve massive amounts of real-world problem-solving.
                                         I have had sufficient experience in Software Development and Engineering through my past internships, projects and coursework. I have worked with various Programming Languages like Java, Python, C, C++, C#, JavaScript, Swift, and Dart. In addition, I have good command over Database Systems like MySQL, MongoDB, and Neo4j.
                                         I developed this command over my tenure as a Teaching Assistant at UIUC</p>     -->
@@ -280,12 +287,12 @@
                     <h3 class="card-header">Skills</h3>
                     <div class="card-body">
                         <dl class="row">
-                            <dt class="col-3">Languages and Databases</dt>
-                            <dd class="col-9">C, C++, Java, Python, C#, Go, JavaScript, Swift, Dart, R, HTML, CSS, SQL, MongoDB, Neo4j.</dd>
-                            <dt class="col-3">Tools and Frameworks</dt>
-                            <dd class="col-9">Flutter, Flask, Django, Node.js, React.js, Spring Boot, Java Swing, .NET, Git, Maven, Gradle, Jenkins, Docker, Docker Swarm, Kubernetes, Spark, Hadoop, Google Cloud Platform, Amazon Web Services, Linux.</dd>
-                            <dt class="col-3">Other Skills</dt>
-                            <dd class="col-9">Data Structures and Algorithms, Competitive Programming (4-star on CodeChef), DevOps.</dd>
+                            <dt class="col-5 col-sm-3">Languages and Databases</dt>
+                            <dd class="col-7 col-sm-9">C, C++, Java, Python, C#, Go, JavaScript, Swift, Dart, R, HTML, CSS, SQL, MongoDB, Neo4j.</dd>
+                            <dt class="col-5 col-sm-3">Tools and Frameworks</dt>
+                            <dd class="col-7 col-sm-9">Flutter, Flask, Django, Node.js, React.js, Spring Boot, Java Swing, .NET, Git, Maven, Gradle, Jenkins, Docker, Docker Swarm, Kubernetes, Spark, Hadoop, Google Cloud Platform, Amazon Web Services, Linux.</dd>
+                            <dt class="col-5 col-sm-3">Other Skills</dt>
+                            <dd class="col-7 col-sm-9">Data Structures and Algorithms, Competitive Programming (4-star on CodeChef), DevOps.</dd>
                         </dl>
                     </div>
                 </div>

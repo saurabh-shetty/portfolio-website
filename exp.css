@@ -51,3 +51,21 @@ ul li {
     background-color: #111111;
   } */
 
+@media (max-width: 767px) {
+  .custom-text-style {
+      text-align: left; /* Align left on small screens */
+  }
+}
+
+/* Custom media query for large screens */
+@media (min-width: 768px) {
+    .custom-text-style {
+        text-align: justify; /* Justify on large screens */
+    }
+}
+
+
+
+
+
+
